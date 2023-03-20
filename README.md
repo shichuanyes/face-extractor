@@ -4,6 +4,8 @@ This program extracts faces from videos and saves them as individual images in a
 It uses OpenCV for face detection and Laplacian matrix sorting for quality control. 
 You might find it helpful when training Stable Diffusion LoRA models.
 
+WARINING: `cv2.CascadeClassifier.detectMultiScale` has hard coded parameters `scaleFactor=2`, `minNeighbors=5` and `minSize=(256,256)`. This will be fixed in the future. 
+
 ## Usage
 
 To run the program, use the following command:
