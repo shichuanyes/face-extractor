@@ -66,7 +66,7 @@ if __name__ == '__main__':
     face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     VIDEO_EXTENSIONS = ('.mp4', '.mov', '.avi', '.mkv', '.wmv')
-    for i, file in enumerate(glob.glob(os.path.join(args.output_dir, "*"))):
+    for i, file in enumerate(glob.glob(os.path.join(args.input_dir, "*"))):
         _, ext = os.path.splitext(file)
         if ext.lower() not in VIDEO_EXTENSIONS:
             continue
